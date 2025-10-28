@@ -32,10 +32,8 @@ type NodeApplyableResourceInstance struct {
 	graphNodeDeposer // implementation of GraphNodeDeposerConfig
 
 	// forceReplace are resource instance addresses where the user wants to
-	// force generating a replace action. This set isn't pre-filtered, so
-	// it might contain addresses that have nothing to do with the resource
-	// that this node represents, which the node itself must therefore ignore.
-	forceReplace []addrs.AbsResourceInstance
+	// force generating a replace action.
+	forceReplace bool
 }
 
 var (
